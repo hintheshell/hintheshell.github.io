@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-01T07:32:32.000Z</updated>
+  <updated>2016-11-30T09:22:21.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zsh iterm2的一点折腾</title>
+    <link href="http://yoursite.com/2016/11/30/zsh-iterm2%E7%9A%84%E4%B8%80%E7%82%B9%E6%8A%98%E8%85%BE/"/>
+    <id>http://yoursite.com/2016/11/30/zsh-iterm2的一点折腾/</id>
+    <published>2016-11-30T09:21:19.000Z</published>
+    <updated>2016-11-30T09:22:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="iterm2-zsh"><a href="#iterm2-zsh" class="headerlink" title="# iterm2 zsh"></a># iterm2 zsh</h1><p>#FE/tools</p>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p><code>export https_proxy=http://127.0.0.1:8888;export http_proxy=http://127.0.0.1:8888</code></p>
+<h2 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">oh-my-zsh</a></h2><p><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code><br><code>~/.zshrc</code>文件中修改<br><code>ZSH_THEME=&quot;agnoster&quot;_</code></p>
+<h2 id="powerline"><a href="#powerline" class="headerlink" title="powerline"></a>powerline</h2><p>安装pip 需要python<br><code>sudo easy_install pip</code><br>Powerline<br><code>pip install powerline-status</code><br><code>pip install git+git://github.com/powerline/powerline</code></p>
+<p>执行<code>pip show powerline-status</code>得到图中<code>location</code><br><img src="http://spicery.d.pr/BR9o.jpg" alt="img"></p>
+<p>在<code>.zshrc</code>中添加<br><code>. /{location}/powerline/bindings/bash/powerline.sh</code></p>
+<p>Vim 激活<br>在<code>.vimrc</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim</div><div class="line"></div><div class="line">&quot; These lines setup the environment to show graphics and colors correctly.</div><div class="line">set nocompatible</div><div class="line">set t_Co=256</div><div class="line"> </div><div class="line">let g:minBufExplForceSyntaxEnable = 1</div><div class="line">python from powerline.vim import setup as powerline_setup</div><div class="line">python powerline_setup()</div><div class="line">python del powerline_setup</div><div class="line"> </div><div class="line">if ! has(&apos;gui_running&apos;)</div><div class="line">   set ttimeoutlen=10</div><div class="line">   augroup FastEscape</div><div class="line">      autocmd!</div><div class="line">      au InsertEnter * set timeoutlen=0</div><div class="line">      au InsertLeave * set timeoutlen=1000</div><div class="line">   augroup END</div><div class="line">endif</div><div class="line"> </div><div class="line">set laststatus=2 &quot; Always display the statusline in all windows</div><div class="line">set guifont=Inconsolata\ for\ Powerline:h14</div><div class="line">set noshowmode &quot; Hide the default mode text (e.g. -- INSERT -- below the statusline)</div></pre></td></tr></table></figure>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>不安装会字符显示错误<br><code>git clone https://github.com/powerline/fonts.git</code><br><code>cd fonts</code><br><code>./install.sh</code><br>在iterm2  Preference > Profiles > Text > Change Fonts<br><img src="# iterm2 zsh/http://spicery.d.pr/1dqMS.jpg" alt=""><br><strong>test</strong><br><code>echo &quot;\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699&quot;</code><br>输出如下<br><img src="# iterm2 zsh/http://spicery.d.pr/EU1v.jpg" alt=""></p>
+<h3 id="配色"><a href="#配色" class="headerlink" title="配色"></a>配色</h3><p>参考<a href="http://wdxtub.com/2016/02/18/oh-my-zsh/" target="_blank" rel="external">zsh 全程指南</a></p>
+<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><h1 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h1><p><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">zsh</a><br><a href="https://powerline.readthedocs.io/en/latest/installation/osx.html" target="_blank" rel="external">powerline</a><br><a href="https://pip.pypa.io/en/stable/" target="_blank" rel="external">pip</a><br><a href="http://wdxtub.com/2016/02/18/oh-my-zsh/" target="_blank" rel="external">zsh 全程指南</a><br><a href="http://cenalulu.github.io/linux/mac-powerline/" target="_blank" rel="external">http://cenalulu.github.io/linux/mac-powerline/</a><br><a href="http://www.jianshu.com/p/68ef9d2e1653" target="_blank" rel="external">http://www.jianshu.com/p/68ef9d2e1653</a><br><a href="https://medium.com/@scomper/%E5%A6%82%E4%BD%95%E8%AE%A9-%E7%BB%88%E7%AB%AF-%E5%BA%94%E7%94%A8%E8%B5%B0%E4%BB%A3%E7%90%86-a114450513a2#.ngat5swqq" target="_blank" rel="external">如何让终端走代理</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iterm2-zsh&quot;&gt;&lt;a href=&quot;#iterm2-zsh&quot; class=&quot;headerlink&quot; title=&quot;# iterm2 zsh&quot;&gt;&lt;/a&gt;# iterm2 zsh&lt;/h1&gt;&lt;p&gt;#FE/tools&lt;/p&gt;
+&lt;h2 id=&quot;代理&quot;&gt;&lt;a href=
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac新手指南</title>
+    <link href="http://yoursite.com/2016/11/30/Mac%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2016/11/30/Mac新手指南/</id>
+    <published>2016-11-30T09:19:20.000Z</published>
+    <updated>2016-11-30T09:19:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mac-装机指南"><a href="#Mac-装机指南" class="headerlink" title="Mac 装机指南"></a>Mac 装机指南</h1><h2 id="个人安装记录"><a href="#个人安装记录" class="headerlink" title="个人安装记录"></a><strong>个人</strong>安装记录</h2><h3 id="制作安装u盘"><a href="#制作安装u盘" class="headerlink" title="制作安装u盘"></a>制作安装u盘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/TOSHIBA --applicationpath /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app --nointeraction</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/U盘磁盘的命名 --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/SanDisk --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</div></pre></td></tr></table></figure>
+<h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><h3 id="osx开启Hidpi模式"><a href="#osx开启Hidpi模式" class="headerlink" title="osx开启Hidpi模式"></a>osx开启Hidpi模式</h3><p>外置显示器开启HiDPI (针对低于4k分辨率的显示其)</p>
+<h4 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h4><ul>
+<li><a href="https://comsysto.com/blog-post/force-hidpi-resolutions-for-dell-u2515h-monitor" target="_blank" rel="external">1</a></li>
+<li><a href="https://comsysto.github.io/Display-Override-PropertyList-File-Parser-and-Generator-with-HiDPI-Support-For-Scaled-Resolutions/" target="_blank" rel="external">2</a></li>
+<li><a href="https://www.zhihu.com/question/35300978" target="_blank" rel="external">3</a></li>
+<li><a href="http://www.insanelymac.com/forum/topic/310345-qhd-monitor-1920x1080-hidpi/" target="_blank" rel="external">4</a></li>
+</ul>
+<h4 id="关闭／开启rootless"><a href="#关闭／开启rootless" class="headerlink" title="关闭／开启rootless"></a>关闭／开启rootless</h4><p>进入recovery mode<br>终端命令 <code>csrutil disable</code><br>重新启用 <code>csrutil enable</code><br>10.11以前文件路径<br>    <code>/System/Library/Displays/Overrides/</code><br>10.11路径<br>    <code>/System/Library/Displays/Contents/Resources/Overrides</code></p>
+<h3 id="终端走代理"><a href="#终端走代理" class="headerlink" title="终端走代理"></a>终端走代理</h3><p>系统自带terminal走代理<br>surge自带功能 打开surge 快捷键<code>cmd c</code><br>输入到终端即可 </p>
+<h2 id="软件相关"><a href="#软件相关" class="headerlink" title="软件相关"></a>软件相关</h2><ol>
+<li>安装xcode<br>只安装command line tools<br><code>xcode-select --install</code></li>
+<li>home-brew   brew-cask (terminal输入命令)<br> 安装brew:<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br> 安装brew cask:<br> <code>brew tap caskroom/cask</code></li>
+<li>mpv安装<br> <code>brew install mpv --with-bundle</code><br> <code>brew linkapps mpv</code></li>
+<li><p>brew cask安装软件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install alfred surge hands-off scroll-reverser hazel bartender hyperdock cleanmymac commander-one istat-menus pdfexpert cheatsheet marked daisydisk flux gfxcardstatus avibrazil-rdm karabiner slack atom firefox google-chrome sublime-text iterm2 webstorm sourcetree bilibili fantastical neteasemusic thunder omnifocus nutstore keyboard-maestro logitech-gaming-software; say 软件安装完成</div></pre></td></tr></table></figure>
+</li>
+<li><p>brew cask安装quick look 增强工具<br> <code>brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package</code></p>
+</li>
+<li>brew安装环境<br> mpv的配置文件<br> **清理环境更新<br> <code>brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup;say mission complete</code></li>
+<li>adobe系列</li>
+<li>brew没有的软件<br> typeit4me  macpaw hider <a href="http://www.zibity.com/macdropany.html" target="_blank" rel="external">macdropany</a> 12306formac  parallels-desktop<br> 可选<br> <code>coconutbattery  visual-studio-code weibox  uninstallpkg  steam  gitup omnioutliner omniplan  grammarly  google-drive  dropbox screens duet  phpstorm omnigraffle  evernote  droplr  kindle  coteditor textwrangler</code><br> <strong>maybe</strong><br> <code>beyond compare Keycastr  screens-connect</code></li>
+<li>Mas使用命令行<br> <code>brew install argon/mas/mas</code></li>
+<li>实用软件<ul>
+<li>bootchamp 快速选择启动磁盘</li>
+<li>isubtitle MKVtools</li>
+<li>easybee</li>
+<li>HandBrake </li>
+<li>nikcollection google 专业滤镜</li>
+<li>autostitch 图片合并 多张 全景</li>
+</ul>
+</li>
+</ol>
+<h2 id="备份路径设置"><a href="#备份路径设置" class="headerlink" title="备份路径设置"></a>备份路径设置</h2><p>坚果云、dropbox</p>
+<h2 id="mac-chrome插件"><a href="#mac-chrome插件" class="headerlink" title="mac chrome插件"></a>mac chrome插件</h2><p>browserstack<br><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt" target="_blank" rel="external">http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt</a></p>
+<h2 id="alfred"><a href="#alfred" class="headerlink" title="alfred"></a>alfred</h2><h4 id="让Alfred支持iterm2"><a href="#让Alfred支持iterm2" class="headerlink" title="让Alfred支持iterm2"></a>让Alfred支持iterm2</h4><p><a href="https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred/blob/master/custom_iterm_script_iterm_2.9.applescript" target="_blank" rel="external">https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred/blob/master/custom_iterm_script_iterm_2.9.applescript</a></p>
+<h2 id="辅助参考"><a href="#辅助参考" class="headerlink" title="辅助参考"></a>辅助参考</h2><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">https://support.apple.com/zh-cn/HT201236</a></p>
+<h3 id="Mac下brew及brew-cask安装使用"><a href="#Mac下brew及brew-cask安装使用" class="headerlink" title="Mac下brew及brew-cask安装使用"></a>Mac下brew及brew-cask安装使用</h3><h4 id="brew常用命令"><a href="#brew常用命令" class="headerlink" title="brew常用命令"></a>brew常用命令</h4><p>●brew install name         # 安装源码<br>●brew info svn                # 显示软件的各种信息，包括版本啊源码地址啊等等<br>●brew uninstall name     # 卸载软件，很爽，一键静默卸载<br>●brew search name       # 搜索brew 支持的软件，支持模糊搜索<br>●brew list                       # 列出本机通过brew安装的所有软件<br>●brew update                # 跟新brew软件自身<br>●brew upgrade name    # 更新安装过的软件,如果不加软件名，就更新所有可以更新的软件<br>●brew cleanup              # 清除下载的各种缓存</p>
+<h4 id="安装brew-cask"><a href="#安装brew-cask" class="headerlink" title="安装brew-cask"></a>安装brew-cask</h4><p><code>brew install brew-cask</code></p>
+<h4 id="brew-cask的常用命令"><a href="#brew-cask的常用命令" class="headerlink" title="brew cask的常用命令"></a>brew cask的常用命令</h4><p>●brew cask search               # 列出所有可以被安装的软件<br>●brew cask search name     # 查找所有和 name相关的应用<br>●brew cask install name       # 下载安装软件<br>●brew cask uninstall name   # 卸载软件<br>●brew cask info app             # 列出应用的信息<br>●brew cask list                      # 列出本机按照过的软件列表<br>●brew cask cleanup              # 清除下载的缓存以及各种链接信息</p>
+<h4 id="更新brew-cask及通过brew-cask安装的程序"><a href="#更新brew-cask及通过brew-cask安装的程序" class="headerlink" title="更新brew cask及通过brew-cask安装的程序"></a>更新brew cask及通过brew-cask安装的程序</h4><p>●brew update &amp;&amp; brew upgrade brew-cask                  </p>
+<h3 id="更新cask自身"><a href="#更新cask自身" class="headerlink" title="更新cask自身"></a>更新cask自身</h3><p>●brew cask uninstall name &amp;&amp; brew cask install name ＃更新程序<br>（目前homebrew-cask 并没有命令直接更新已安装的软件，软件更新主要是通过软件自身的完成更新）</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/" target="_blank" rel="external">How to Install Command Line Tools in OS X Mavericks &amp; Yosemite (Without Xcode)</a></p>
+<p>#tools/mac</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Mac-装机指南&quot;&gt;&lt;a href=&quot;#Mac-装机指南&quot; class=&quot;headerlink&quot; title=&quot;Mac 装机指南&quot;&gt;&lt;/a&gt;Mac 装机指南&lt;/h1&gt;&lt;h2 id=&quot;个人安装记录&quot;&gt;&lt;a href=&quot;#个人安装记录&quot; class=&quot;headerli
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
