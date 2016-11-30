@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://twitter.com/spiceryy/"/>
   <updated>2016-11-30T09:44:29.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://twitter.com/spiceryy/</id>
   
   <author>
     <name>spicery</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>zsh iterm2的一点折腾</title>
-    <link href="http://yoursite.com/2016/11/30/zsh-iterm2%E7%9A%84%E4%B8%80%E7%82%B9%E6%8A%98%E8%85%BE/"/>
-    <id>http://yoursite.com/2016/11/30/zsh-iterm2的一点折腾/</id>
+    <link href="https://twitter.com/spiceryy/2016/11/30/zsh-iterm2%E7%9A%84%E4%B8%80%E7%82%B9%E6%8A%98%E8%85%BE/"/>
+    <id>https://twitter.com/spiceryy/2016/11/30/zsh-iterm2的一点折腾/</id>
     <published>2016-11-30T09:21:19.000Z</published>
     <updated>2016-11-30T09:44:29.000Z</updated>
     
@@ -47,8 +47,8 @@
   
   <entry>
     <title>Mac新手指南</title>
-    <link href="http://yoursite.com/2016/11/30/Mac%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2016/11/30/Mac新手指南/</id>
+    <link href="https://twitter.com/spiceryy/2016/11/30/Mac%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
+    <id>https://twitter.com/spiceryy/2016/11/30/Mac新手指南/</id>
     <published>2016-11-30T09:19:20.000Z</published>
     <updated>2016-11-30T09:19:48.000Z</updated>
     
@@ -111,8 +111,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/11/01/hello-world/"/>
-    <id>http://yoursite.com/2016/11/01/hello-world/</id>
+    <link href="https://twitter.com/spiceryy/2016/11/01/hello-world/"/>
+    <id>https://twitter.com/spiceryy/2016/11/01/hello-world/</id>
     <published>2016-11-01T06:14:54.000Z</published>
     <updated>2016-11-01T07:32:32.000Z</updated>
     
