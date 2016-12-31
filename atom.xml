@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://twitter.com/spiceryy/"/>
-  <updated>2016-11-30T11:51:37.000Z</updated>
+  <updated>2016-12-31T08:22:27.000Z</updated>
   <id>https://twitter.com/spiceryy/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闭包的理解</title>
+    <link href="https://twitter.com/spiceryy/2016/12/31/%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>https://twitter.com/spiceryy/2016/12/31/闭包的理解/</id>
+    <published>2016-12-31T08:22:27.000Z</published>
+    <updated>2016-12-31T08:22:27.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>zsh iterm2的一点折腾</title>
@@ -52,9 +66,9 @@
     <link href="https://twitter.com/spiceryy/2016/11/30/Mac%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97/"/>
     <id>https://twitter.com/spiceryy/2016/11/30/Mac新手指南/</id>
     <published>2016-11-30T09:19:20.000Z</published>
-    <updated>2016-11-30T09:19:48.000Z</updated>
+    <updated>2016-11-30T12:18:04.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Mac-装机指南"><a href="#Mac-装机指南" class="headerlink" title="Mac 装机指南"></a>Mac 装机指南</h1><h2 id="个人安装记录"><a href="#个人安装记录" class="headerlink" title="个人安装记录"></a><strong>个人</strong>安装记录</h2><h3 id="制作安装u盘"><a href="#制作安装u盘" class="headerlink" title="制作安装u盘"></a>制作安装u盘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/TOSHIBA --applicationpath /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app --nointeraction</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h1 id="Mac-装机指南"><a href="#Mac-装机指南" class="headerlink" title="Mac 装机指南"></a>Mac 装机指南</h1><h2 id="个人安装记录"><a href="#个人安装记录" class="headerlink" title="个人安装记录"></a><strong>个人</strong>安装记录</h2><h3 id="制作安装u盘"><a href="#制作安装u盘" class="headerlink" title="制作安装u盘"></a>制作安装u盘</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/TOSHIBA --applicationpath /Volumes/Time/software/iso/Install\ OS\ X\ El\ Capitan.app --nointeraction</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/U盘磁盘的命名 --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/SanDisk --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction</div></pre></td></tr></table></figure>
 <h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><h3 id="osx开启Hidpi模式"><a href="#osx开启Hidpi模式" class="headerlink" title="osx开启Hidpi模式"></a>osx开启Hidpi模式</h3><p>外置显示器开启HiDPI (针对低于4k分辨率的显示其)</p>
@@ -71,7 +85,7 @@
 <li>home-brew   brew-cask (terminal输入命令)<br> 安装brew:<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br> 安装brew cask:<br> <code>brew tap caskroom/cask</code></li>
 <li>mpv安装<br> <code>brew install mpv --with-bundle</code><br> <code>brew linkapps mpv</code></li>
 <li><p>brew cask安装软件  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install alfred surge hands-off scroll-reverser hazel bartender hyperdock cleanmymac commander-one istat-menus pdfexpert cheatsheet marked daisydisk flux gfxcardstatus avibrazil-rdm karabiner slack atom firefox google-chrome sublime-text iterm2 webstorm sourcetree bilibili fantastical neteasemusic thunder omnifocus nutstore keyboard-maestro logitech-gaming-software; say 软件安装完成</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install alfred surge hands-off scroll-reverser hazel bartender hyperdock cleanmymac commander-one istat-menus pdfexpert cheatsheet marked daisydisk flux gfxcardstatus avibrazil-rdm karabiner slack atom firefox google-chrome sublime-text iterm2 webstorm sourcetree bilibili fantastical neteasemusic thunder omnifocus nutstore keyboard-maestro logitech-gaming-software; say 软件安装完成</div></pre></td></tr></table></figure>
 </li>
 <li><p>brew cask安装quick look 增强工具<br> <code>brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package</code></p>
 </li>
