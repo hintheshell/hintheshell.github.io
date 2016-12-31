@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hello World · Spicery</title><meta name="description" content="Hello World - spicery"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://twitter.com/spiceryy/atom.xml" title="Spicery"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/1781795273" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://twitter.com/spiceryy" target="_blank" class="nav-list-link">TWITER</a></li><li class="nav-list-item"><a href="https://github.com/spicery-" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hello World</h1><div class="post-info">Nov 1, 2016</div><div class="post-content"><h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p><code>npm install hexo-cli -g</code></p>
+<p>创建博客想要放的文件夹 例如 <code>~/hexo</code><br><code>cd hexo</code></p>
+<p><code>hexo init</code></p>
+<p><code>npm install</code></p>
+<p><code>hexo g</code></p>
+<p><code>hexo s</code><br>然后用浏览器访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+<p>修改<code>_config.yml</code><br>翻到最下面，改成如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">     type: git</div><div class="line">     repo: https://github.com/usename/usename.github.io.git</div><div class="line">     branch: master</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>冒号：之后必须有空格</p>
+</blockquote>
+<p>再次<br><code>hexo g</code></p>
+<p>提交到github<br><code>hexo d</code></p>
+<p>新建文章<br><code>hexo new “new bolg”</code></p>
+<p>假如更改了github名字，需要修改<code>_config.yml</code>中的配置<br>并且执行<code>hero clean</code>，否则提交时报错</p>
+<h2 id="参考-amp-致谢"><a href="#参考-amp-致谢" class="headerlink" title="参考&amp;致谢"></a>参考&amp;致谢</h2><p><a href="http://blog.csdn.net/qq_15807167/article/details/51601234" target="_blank" rel="external">hexo在github上搭建个人博客详细步骤</a><br><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">HEXO+Github,搭建属于自己的博客</a></p>
+<h2 id="使用教程原版"><a href="#使用教程原版" class="headerlink" title="使用教程原版"></a>使用教程原版</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/11/30/Mac新手指南/" class="prev">PREV</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'spicery';
+var disqus_identifier = '2016/11/01/hexo博客搭建/';
+var disqus_title = 'Hello World';
+var disqus_url = 'https://twitter.com/spiceryy/2016/11/01/hexo博客搭建/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//spicery.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 <a href="https://twitter.com/spiceryy">spicery</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-88234762-1",'auto');ga('send','pageview');</script></body></html>
